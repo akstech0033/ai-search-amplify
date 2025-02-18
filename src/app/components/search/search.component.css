@@ -1,0 +1,132 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 650px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  margin: 20px auto;
+  border-radius: 5px; /* Rounded corners for the entire container */
+  overflow: hidden; /* Important: hides the overflow of the rounded corners */
+}
+input[type="text"] {
+  flex-grow: 1; /* Input takes up available space */
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px; /* Rounded corners on left */
+  font-size: 16px;
+}
+input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 25px;
+  background-color: #3b4d7e;
+  color: white;
+  border: oldlace;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* Loader */
+.loader-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error Box */
+.error-box {
+  background-color: #ffdddd;
+  border-left: 6px solid #d9534f;
+  padding: 10px;
+  margin-top: 20px;
+  text-align: left;
+  border-radius: 5px;
+}
+
+/* Summary Box */
+.summary-box {
+  background-color: #e9f7ef;
+  border-left: 6px solid #28a745;
+  padding: 15px;
+  margin-top: 20px;
+  text-align: left;
+  border-radius: 5px;
+}
+
+/* Dropdown */
+.dropdown-container {
+  margin-top: 20px;
+}
+
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 16px;
+}
+
+/* AI Response Box */
+response-box {
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  text-align: left;
+  border-left: 6px solid #17a2b8;
+  max-height: 300px;  /* Restrict height */
+  overflow-wrap: break-word;  /* Enable vertical scrolling */
+  word-wrap: break-word;  /* Ensure words break properly */
+  white-space: pre-wrap;  /* Preserve formatting and wrap */
+}
+.response-box pre {
+  margin-bottom: 5px;
+  padding: 8px;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  background-color: #f9f9f9; /* Light background for list items */
+  transition: background-color 0.2s ease;
+  overflow-wrap: break-word;  /* Enable vertical scrolling */
+  word-wrap: break-word;  /* Ensure words break properly */
+  white-space: pre-wrap;  /* Preserve formatting and wrap */
+}

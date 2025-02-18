@@ -1,0 +1,38 @@
+<div class="container">
+  <h2>AI Response Viewer</h2>
+
+  <!-- Input Box & Search Button -->
+  <div class="search-box">
+    <input type="text" [(ngModel)]="query" placeholder="Search..."/>
+    <button (click)="searchAI()">Go</button>
+  </div>
+
+  <!-- Dropdown to select AI response -->
+  <div class="dropdown-container">
+    <h2 for="ai-select">Select AI Response:</h2>
+    <select [(ngModel)]="selectedAI" id="ai-select">
+      <option value="summary">Summarized Response</option>
+      <option value="openai">OpenAI</option>
+      <option value="gemini">Gemini</option>
+      <option value="claude">Claude</option>
+      <option value="deepseek">DeepSeek</option>
+      <option value="llama">Llama</option>
+      <option value="copilot">Copilot</option>
+    </select>
+  </div>
+
+  <div *ngIf="loading" class="loader"></div>
+  <!-- Error Messages -->
+  <div *ngIf="errors.length > 0" class="error-box">
+    <h3>Warnings</h3>
+    <ul>
+      <li *ngFor="let error of errors">{{ error }}</li>
+    </ul>
+  </div>
+
+  <!-- AI Response Display -->
+  <div class="response-box">
+    <h3>{{ selectedAI | titlecase }} Response</h3>
+    <pre>{{ responses[selectedAI] }}</pre>
+  </div>
+</div>
