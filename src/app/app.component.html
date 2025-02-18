@@ -1,1 +1,10 @@
-<app-search></app-search>
+<amplify-authenticator>
+    <ng-template
+      amplifySlot="authenticated"
+      let-user="user"
+      let-signOut="signOut"
+    >
+    <app-search></app-search>
+      <button (click)="signOut()">Sign Out</button>
+    </ng-template>
+  </amplify-authenticator>
